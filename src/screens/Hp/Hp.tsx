@@ -3,6 +3,8 @@ import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { AboutUsSection } from "./sections/AboutUsSection/AboutUsSection";
 import { CallToActionSection } from "./sections/CallToActionSection/CallToActionSection";
+import CheckEligibilitySection from "./sections/CheckEligibilitySection/CheckEligibilitySection";
+import FaqSection from "./sections/FaqSection/FaqSection";
 import { FeaturesSection } from "./sections/FeaturesSection/FeaturesSection";
 import { FooterSection } from "./sections/FooterSection/FooterSection";
 import { HeroSection } from "./sections/HeroSection/HeroSection";
@@ -279,23 +281,6 @@ export const Hp = () => {
           <SecuritySupportSection />
         </section>
 
-        {/* FAQ Header */}
-        <section className="w-full px-4 py-16 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:2400ms]">
-          <div className="max-w-2xl mx-auto text-center">
-            <Badge className="mb-4 bg-white rounded-[20px_5px_5px_5px] border border-solid border-[#1caa7b] shadow-[0px_1px_2px_#0000001a,0px_3px_3px_#00000017,0px_7px_4px_#0000000d,0px_12px_5px_#00000003,0px_19px_5px_transparent] text-[#109157] font-semibold">
-              FAQ
-            </Badge>
-            <h2 className="[font-family:'Poppins',Helvetica] font-medium text-5xl text-center tracking-[-1.44px] leading-[68px]">
-              <span className="text-black tracking-[-0.69px]">
-                Everything You{" "}
-              </span>
-              <span className="text-[#0aa26c] tracking-[-0.69px]">
-                Need to Know
-              </span>
-            </h2>
-          </div>
-        </section>
-
         {/* Pricing Section */}
         <section className="w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:2600ms]">
           <PricingSection />
@@ -305,12 +290,18 @@ export const Hp = () => {
         <section className="w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:2800ms]">
           <div className="relative">
             <AboutUsSection />
-            <HeroSection />
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <FaqSection />
+
+        {/* Check Eligibility Section */}
+        <CheckEligibilitySection />
+
         {/* Footer Section */}
-        <section className="w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:3000ms]">
+        {/* <section className="w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:3000ms]"> */}
+        <section className="">
           <FooterSection />
         </section>
       </div>
