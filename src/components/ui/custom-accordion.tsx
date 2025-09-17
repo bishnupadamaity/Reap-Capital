@@ -40,14 +40,14 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({
           <div
             key={item.id}
             className={cn(
-              "border border-transparent bg-blue-50 p-2 rounded-3xl cursor-pointer transition-all duration-300 ease-in-out",
+              "border bg-gray-100 border-solid border-gray-200 p-2 rounded-3xl cursor-pointer transition-all duration-300 ease-in-out",
               isOpen && " hover:border-green-600"
             )}
           >
             <button
               onClick={() => toggleItem(item.id)}
               className={cn(
-                "w-full cursor-pointer bg-white shadow-md px-6 py-4 text-left text-gray-800 font-medium transition-all duration-600 ease-in-out",
+                "w-full cursor-pointer bg-white shadow-sm px-6 py-4 text-left text-gray-800 font-medium transition-all duration-600 ease-in-out",
                 "flex items-center justify-between",
                 isOpen && "bg-white rounded-t-2xl",
                 !isOpen && "rounded-2xl"

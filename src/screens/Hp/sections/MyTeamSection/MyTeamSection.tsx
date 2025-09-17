@@ -1,7 +1,8 @@
+import HeaderBrick from "../../../../components/HeaderBrick/HeaderBrick";
 import { Badge } from "../../../../components/ui/badge";
 import { Card, CardContent } from "../../../../components/ui/card";
 
-export const ServicesSection = () => {
+const MyTeamSection = () => {
   const teamMembers = [
     {
       name: "Rajiv Talreja",
@@ -25,18 +26,12 @@ export const ServicesSection = () => {
       isLarge: false,
     },
   ];
-
   return (
-    <section className="w-full relative py-16 px-4">
+    <section className="w-full self-center relative px-4 pb-[7rem]">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <header className="flex flex-col items-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
-          <Badge
-            variant="outline"
-            className="mb-4 bg-white rounded-[20px_5px_5px_5px] border-[#1caa7b] text-[#109157] font-semibold shadow-[0px_1px_2px_#0000001a,0px_3px_3px_#00000017,0px_7px_4px_#0000000d,0px_12px_5px_#00000003,0px_19px_5px_transparent] px-6 py-1"
-          >
-            Team
-          </Badge>
+          <HeaderBrick text="Team" />
 
           <h2 className=" flex flex-col items-center text-5xl font-medium text-center tracking-[-1.44px] leading-[58px] [font-family:'Poppins',Helvetica] max-w-md">
             <span className="text-black tracking-[-0.69px]">About the </span>
@@ -45,12 +40,12 @@ export const ServicesSection = () => {
         </header>
 
         {/* Team Members Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start   max-w-6xl mx-auto">
           {/* Rajiv Talreja - Large Profile */}
-          <div className="lg:col-span-2 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+          <div className="lg:col-span-2 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]  ">
             <Card className="border-0 shadow-none bg-transparent">
               <CardContent className="p-0">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div className="order-2 lg:order-1">
                     <img
                       src={teamMembers[0].image}
@@ -117,3 +112,5 @@ export const ServicesSection = () => {
     </section>
   );
 };
+
+export default MyTeamSection;
